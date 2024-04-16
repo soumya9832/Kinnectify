@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "52430100123",
+    "project_id": "myapps-1d7c1",
+    "storage_bucket": "myapps-1d7c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52430100123:android:f0f5cb05a58f5ff36e183e",
+        "android_client_info": {
+          "package_name": "com.example.kinnectify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV3Lb3g4zTY3y477QYesdr7hNGxciQ4zI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
