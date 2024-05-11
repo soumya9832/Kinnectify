@@ -10,6 +10,7 @@ import com.example.kinnectify.models.User
 import com.example.kinnectify.repository.Repository
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.security.PrivateKey
 import javax.inject.Inject
@@ -41,5 +42,21 @@ class ViewModelMain @Inject constructor(
             uploadPostLiveData=repository.uploadPost(post)
         }
     }
+
+    var postsLiveData=MutableLiveData<Resource<List<Post>>>()
+    fun getPosts(){
+        viewModelScope.launch {
+            postsLiveData=repository.getPosts()
+        }
+    }
+
+    fun setLike(post: Post){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.setLike(post)
+        }
+    }
+
+
+
 
 }
