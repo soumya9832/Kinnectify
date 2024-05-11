@@ -27,6 +27,10 @@
     <dimen name="_240sdp">240dp</dimen>
     <dimen name="_70sdp">70dp</dimen>
     <dimen name="_40sdp">40dp</dimen>
+    <dimen name="_260sdp">260</dimen>
+    <dimen name="_320sdp">320</dimen>
+    <dimen name="_6sdp">6</dimen>
+    <dimen name="_7sdp">7</dimen>
 
 
 </resources>
