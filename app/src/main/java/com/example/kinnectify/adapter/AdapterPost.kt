@@ -150,6 +150,7 @@ class AdapterPost @Inject constructor(
         }
     }
 
+    //Used some deprecated methods , will fix it latter
     private fun buildMediaSource(uri :Uri) :MediaSource{
         val dataSourceFactory : DataSource.Factory = DefaultDataSourceFactory(context,"exoPlayer")
         return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource((MediaItem.fromUri(uri)))
