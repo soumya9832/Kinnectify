@@ -110,6 +110,7 @@
         </LinearLayout>
 
 
+        <!-- Have To use Brojabravo Libraray for expanding textview-->
         <TextView
             android:id="@+id/post_caption"
             android:layout_width="match_parent"
@@ -129,6 +130,16 @@
             android:text="translated from en"
             android:textColor="@color/purple_500"
             android:layout_margin="@dimen/_2sdp"
+            />
+        <ImageView
+            android:id="@+id/post_Image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:background="#FFF"
+            android:scaleType="centerCrop"
+            android:elevation="@dimen/_4sdp"
+            style="@style/CardView"
+            android:visibility="gone"
             />
 
         <com.google.android.exoplayer2.ui.PlayerView
