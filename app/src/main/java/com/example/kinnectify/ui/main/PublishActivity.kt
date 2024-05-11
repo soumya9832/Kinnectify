@@ -175,24 +175,24 @@ class PublishActivity : AppCompatActivity() {
 //                    Status.SUCCESS->
 //                    {
 //                        post.languageCode=it.data.toString()
-                        viewModel.uploadPost(post)
-                        viewModel.uploadPostLiveData.observe(this){
-                            when(it.status)
-                            {
-                                Status.SUCCESS->
-                                {
-                                    Toast.makeText(myContext, "Post Published", Toast.LENGTH_SHORT).show()
-                                    startActivity(Intent(this, MainActivity::class.java))
-                                    finish()
-                                }
-                                Status.ERROR->
-                                {
-                                    Toast.makeText(myContext, "${it.message}", Toast.LENGTH_SHORT).show()
-                                }
-                                else->{
-                                    Toast.makeText(myContext, "problem in upload post", Toast.LENGTH_SHORT).show()
-                                }
-                            }
+            viewModel.uploadPost(post)
+            viewModel.uploadPostLiveData.observe(this){
+                when(it.status)
+                {
+                    Status.SUCCESS->
+                    {
+                        Toast.makeText(myContext, "Post Published", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                    }
+                    Status.ERROR->
+                    {
+                        Toast.makeText(myContext, "${it.message}", Toast.LENGTH_SHORT).show()
+                    }
+                    else->{
+                        Toast.makeText(myContext, "problem in upload post", Toast.LENGTH_SHORT).show()
+                    }
+                }
 
 //                        }
 //                    }
